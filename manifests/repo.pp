@@ -16,16 +16,16 @@
 #
 # $bare::       If this is true, git will create a bare repository
 
-define git::repo(
+define git::repo (
   $path,
-  $source   = false,
-  $branch   = undef,
-  $git_tag  = undef,
-  $owner    = 'root',
-  $group    = 'root',
-  $update   = false,
-  $bare     = false
-){
+  $source  = false,
+  $branch  = undef,
+  $git_tag = undef,
+  $owner   = 'root',
+  $group   = 'root',
+  $update  = false,
+  $bare    = false
+) {
 
   require git
   require git::params
@@ -57,7 +57,7 @@ define git::repo(
   if ! defined(File[$path]){
     file{$path:
       ensure  => directory,
-      owner => $owner,
+      owner   => $owner,
       recurse => true,
     }
   }

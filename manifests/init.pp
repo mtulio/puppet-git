@@ -37,12 +37,12 @@ class git(
   case $::operatingsystem  {
     RedHat,CentOS,Ubuntu, Debian,Amazon:{
       class{'git::install':
-        gui   => $gui,
-        svn   => $svn,
+        gui => $gui,
+        svn => $svn,
       }
     }
     default:{
-      warning("git is not configured for $::operatingsystem on $::fqdn")
+      warning("git is not configured for ${::operatingsystem} on ${::fqdn}")
     }
   }
 }

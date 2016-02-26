@@ -1,0 +1,37 @@
+{
+  "name": "jproyo-git",
+  "version": "1.0.0",
+  "author": "Juan Pablo Royo",
+  "summary": "Git client module to clone repos.",
+  "description": "Git client module to clone repos",
+  "license": "Apache-2.0",
+  "source": "https://github.com/mxhero/puppet-git",
+  "project_page": "https://github.com/mxhero/puppet-git",
+  "issues_url": "https://github.com/mxhero/puppet-git/issues",
+  "tags": ["linux", "git", "client", "clone", "pull"],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [ 
+        "6",
+        "7" 
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6", 
+        "7" 
+      ]
+    }
+  ],
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 4.10.0"}
+  ]
+}
